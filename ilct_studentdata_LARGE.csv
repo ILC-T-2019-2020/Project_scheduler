@@ -12044,4 +12044,4 @@ id,Course,Year,NumClasses,FirstTimePref,SecondTimePref,ThirdTimePref
 12042,CMSC 99999,1,1,Morning,Evening,Afternoon
 12043,CMSC 99999,2,4,Morning,Afternoon,Evening
 12044,CMSC 99999,3,8,Evening,Morning,Afternoon
-12045,CMSC 99999,4,8,Afternoon
+12045,CMSC 99999,4,8,Afternoon,Morning,Evening

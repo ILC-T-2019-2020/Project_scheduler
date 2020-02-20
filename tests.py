@@ -56,7 +56,7 @@ if __name__ == "__main__":
     for key, pairing in enumerate(sol_contents):
         points += calculate_points_for_pair(args, dataset_contents, key, pairing)
     
-    num_leftover_students = len(dataset_contents) - len(sol_contents)
+    num_leftover_students = len(dataset_contents) - 2 * len(sol_contents)
     if debug: 
         print("Lonely student num: ", num_leftover_students)
     points -= num_leftover_students * args.lefterover_penalty

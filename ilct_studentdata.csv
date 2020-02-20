@@ -515,4 +515,3 @@ id,Course,Year,NumClasses,FirstTimePref,SecondTimePref,ThirdTimePref
 513,CMSC 23500,3,12,Morning,Afternoon,Evening
 514,CMSC 23500,2,7,Morning,Evening,Afternoon
 515,CMSC 23500,2,9,Evening,Afternoon,Morning
-516,CMSC 23500,2,10,Morning,Evening,Afternoon
