@@ -1,4 +1,4 @@
-Course,Year,NumClasses,FirstTimePref,SecondTimePref,ThirdTimePref
+id,Course,Year,NumClasses,FirstTimePref,SecondTimePref,ThirdTimePref
 0,CMSC 15100,3,1,Evening,Afternoon,Morning
 1,CMSC 15100,2,1,Morning,Afternoon,Evening
 2,CMSC 15100,4,1,Afternoon,Evening,Morning
