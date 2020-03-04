@@ -11,7 +11,7 @@ def calculate_points_for_pair(args, dataset_contents, key, pairing):
     student2 = dataset_contents[int(pairing[1]) + 1]
     if debug:
         print("Evaluating pairing #{} pairing {}".format(key, pairing))
-    
+
     if student1[1] != student2[1]:
         if debug:
             print("Point 0: Student 1 and 2 not in same class")
@@ -26,7 +26,7 @@ def calculate_points_for_pair(args, dataset_contents, key, pairing):
             print('Point {}: diff penalty {}, preference point {}'.format(point, diff, preference))
         return point
 
-    
+
 
 if __name__ == "__main__":
     print("Running tests:")
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument('--lefterover_penalty', type=int, default='50', help='penalty for leaving someone alone')
     parser.add_argument('--debug', default=False, help='whether to run program in debug mode or not')
     args = parser.parse_args()
-    
+
     dataset_path = args.dataset_path
     sol_path = args.sol_path
     debug = args.debug
@@ -48,16 +48,16 @@ if __name__ == "__main__":
     with open(dataset_path, "rt") as csvfile:
         dataset_contents = list(csv.reader(csvfile, delimiter = ','))
         # print(contents)
-    
+
     with open(sol_path, "rt") as csvfile:
         sol_contents = list(csv.reader(csvfile, delimiter = ","))
-    
+
     points = 0
     for key, pairing in enumerate(sol_contents):
         points += calculate_points_for_pair(args, dataset_contents, key, pairing)
-    
-    num_leftover_students = len(dataset_contents) - 2 * len(sol_contents)
-    if debug: 
+
+    num_leftover_students = len(dataset_contents) - 2 * len(sol_contents) - 1
+    if debug:
         print("Lonely student num: ", num_leftover_students)
     points -= num_leftover_students * args.lefterover_penalty
 
